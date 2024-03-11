@@ -26,7 +26,7 @@
     </section>
 
     <section class="main-content">
-      <h1 id=""><center>BiVocoder: a Bidirectional Neural Vocoder For Feature Extraction and Waveform Generation </center></h1>
+      <h1 id=""><center>BiVocoder: A Bidirectional Neural Vocoder Integrating Feature Extraction and Waveform Generation </center></h1>
       <!-- <h1 id=""><center> Evaluation </center></h1> -->
       
 <center>Anonymous submission to Interspeech 2024 </center>
@@ -38,9 +38,9 @@
 
 <h2 id="abstract">Abstract</h2>
 <p>This paper proposes a novel bidirectional neural vocoder, named BiVocoder, capable both of feature extraction and reverse waveform generation within the short-time Fourier transform (STFT) domain. 
-For feature extraction, the BiVocoder takes amplitude and phase spectra derived from STFT as inputs, transforms them into long-frame-shift and low-dimensional features through convolutional neural networks. 
-The extracted features are demonstrated suitable for direct prediction by acoustic models, supporting its application in text-to-speech (TTS) task.  
-For waveform generation, the BiVocoder restores amplitude and phase spectra from the features by a symmetric network, followed by inverse STFT to reconstruct the speech waveform. Experimental results show that our proposed BiVocoder achieves better performance compared to some baseline vocoders, by comprehensively considering both synthesized speech quality and inference speed for both analysis-synthesis and TTS tasks.</p>
+  For feature extraction, the BiVocoder takes amplitude and phase spectra derived from STFT as inputs, transforms them into long-frame-shift and low-dimensional features through convolutional neural networks. 
+  The extracted features are demonstrated suitable for direct prediction by acoustic models, supporting its application in text-to-speech (TTS) task.  
+  For waveform generation, the BiVocoder restores amplitude and phase spectra from the features by a symmetric network, followed by inverse STFT to reconstruct the speech waveform. Experimental results show that our proposed BiVocoder achieves better performance compared to some baseline vocoders, by comprehensively considering both synthesized speech quality and inference speed for both analysis-synthesis and TTS tasks. </p>
 
 <h2><p class="toc_title">Contents</p></h2>
 <div id="toc_container">
@@ -56,13 +56,15 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
 <div>
   <br />
   <p style="text-align: center">
-    <img src="./fig2.png" width="1800" height="600"/>
+    <img src="./fig2.png" width="1500" height="500"/>
   </p>
   <p>
   <figcaption style="text-align:center;">
     </font>
     <font size=3>
-      Fig.1 Overview of our proposed model.
+      Fig.1 The architecture of BiVocoder and discriminators are omitted in the diagram. ABS(·) and Angle(·) denote amplitude and
+      phase spectrum calculations. Arctan2 stands for two-arguement arc-tan function. Conv1d and DeConv1d represents 1D convolutional
+      layer and 1D deconvolutional layer, respectively.
     </font>
   </figcaption><br><br>
   </p>
@@ -99,9 +101,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -142,9 +144,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -185,9 +187,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -227,9 +229,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -269,9 +271,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -311,9 +313,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -353,9 +355,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -395,9 +397,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
   <thead>
     <tr>
       <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-      <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-      <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-      <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+      <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+      <th style="text-align: center"><strong>APNet*</strong></th>
+      <th style="text-align: center"><strong>Autovocoder*</strong></th>
       <th style="text-align: center"><strong>Straight</strong></th>
     </tr>
   </thead>
@@ -596,9 +598,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -641,9 +643,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -685,9 +687,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -729,9 +731,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -773,9 +775,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -817,9 +819,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
@@ -861,9 +863,9 @@ For waveform generation, the BiVocoder restores amplitude and phase spectra from
       <thead>
         <tr>
           <th style="text-align: center"><strong>BiVocoder (proposed)</strong></th>
-          <th style="text-align: center"><strong>HiFi-GAN_BFLD</strong></th>
-          <th style="text-align: center"><strong>APNet_BFLD</strong></th>
-          <th style="text-align: center"><strong>Autovocoder_BFLD</strong></th>
+          <th style="text-align: center"><strong>HiFi-GAN*</strong></th>
+          <th style="text-align: center"><strong>APNet*</strong></th>
+          <th style="text-align: center"><strong>Autovocoder*</strong></th>
           <th style="text-align: center"><strong>Straight</strong></th>
         </tr>
       </thead>
